@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nine Layers of Risk Behind Q1 2026 Bank Earnings — Aureus Macro</title>
+<style>
+  :root {
+    --navy: #0D2B45;
+    --blue: #2E7BA8;
+    --gold: #C9963A;
+    --gray: #5F5E5A;
+    --light-gray: #888780;
+    --border: rgba(136,135,128,0.2);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: #ffffff;
+    color: #1a1a1a;
+    line-height: 1.85;
+    font-size: 17px;
+  }
+  .page { max-width: 780px; margin: 0 auto; padding: 60px 40px 100px; }
+
+  .report-header { border-bottom: 2px solid var(--navy); padding-bottom: 24px; margin-bottom: 40px; }
+  .brand-line { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+  .brand { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.12em; color: var(--blue); }
+  .date-line { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; color: var(--light-gray); }
+  h1 { font-size: 32px; font-weight: 700; line-height: 1.25; color: var(--navy); margin-bottom: 12px; letter-spacing: -0.01em; }
+  .subtitle { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: var(--light-gray); }
+
+  .section { margin-bottom: 52px; }
+  h2 { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--blue); margin-bottom: 20px; padding-bottom: 8px; border-bottom: 0.5px solid var(--border); }
+  .layer-heading { font-size: 21px; font-weight: 700; color: var(--navy); margin-bottom: 20px; line-height: 1.3; }
+  .layer-tag { display: inline-block; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; padding: 3px 10px; border-radius: 3px; margin-bottom: 10px; text-transform: uppercase; }
+  .tag-critical { background: rgba(201,150,58,0.12); color: var(--gold); border: 0.5px solid var(--gold); }
+  .tag-elevated { background: rgba(46,123,168,0.1); color: var(--blue); border: 0.5px solid var(--blue); }
+  .tag-latent { background: rgba(95,94,90,0.08); color: var(--gray); border: 0.5px solid var(--gray); }
+
+  p { margin-bottom: 20px; color: #1a1a1a; }
+  p:last-child { margin-bottom: 0; }
+
+  .layers-index { background: #f8f9fa; border-left: 3px solid var(--gold); border-radius: 0 6px 6px 0; padding: 24px 28px; margin: 32px 0; }
+  .layers-intro { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 600; color: var(--navy); margin-bottom: 16px; font-style: italic; }
+  .layer-index-row { display: flex; gap: 12px; align-items: flex-start; padding: 7px 0; border-bottom: 0.5px solid var(--border); font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; }
+  .layer-index-row:last-child { border-bottom: none; }
+  .layer-num { width: 22px; height: 22px; min-width: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 600; margin-top: 2px; }
+  .num-critical { background: rgba(201,150,58,0.15); color: var(--gold); border: 1.5px solid var(--gold); }
+  .num-elevated { background: rgba(46,123,168,0.12); color: var(--blue); border: 1.5px solid var(--blue); }
+  .num-latent { background: transparent; color: var(--gray); border: 1.5px dashed var(--gray); }
+  .layer-index-name { font-weight: 600; color: #1a1a1a; }
+  .layer-index-anchor { color: var(--light-gray); font-size: 12px; margin-top: 1px; }
+
+  .pull-quote { border-left: 3px solid var(--gold); padding: 16px 24px; margin: 32px 0; font-style: italic; font-size: 19px; color: var(--navy); line-height: 1.5; }
+
+  .chart-placeholder { border: 1.5px dashed var(--blue); border-radius: 6px; padding: 18px 22px; margin: 28px 0; background: rgba(46,123,168,0.03); }
+  .chart-placeholder-label { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--blue); margin-bottom: 4px; }
+  .chart-placeholder-title { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; color: #444441; }
+  .chart-placeholder-note { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; color: var(--light-gray); margin-top: 4px; }
+
+  .matrix-container { margin: 36px 0; border: 0.5px solid var(--border); border-radius: 8px; padding: 24px; background: #fafafa; }
+  .matrix-title { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--light-gray); margin-bottom: 16px; }
+
+  .divider { border: none; border-top: 0.5px solid var(--border); margin: 48px 0; }
+
+  .report-footer { margin-top: 60px; padding-top: 24px; border-top: 2px solid var(--navy); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+  .footer-brand { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.1em; color: var(--blue); }
+  .footer-text { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; color: var(--light-gray); max-width: 440px; line-height: 1.5; }
+
+  @media (max-width: 600px) { .page { padding: 32px 20px 60px; } h1 { font-size: 24px; } .layer-heading { font-size: 18px; } }
+
+  .am-tt { position: absolute; background: #0D2B45; color: #B5D4F4; border: 0.5px solid #2E7BA8; border-radius: 6px; padding: 10px 13px; font-size: 12px; line-height: 1.5; pointer-events: none; opacity: 0; transition: opacity 0.15s; max-width: 240px; z-index: 10; font-family: 'Helvetica Neue', Arial, sans-serif; }
+  .risk-row { display: flex; align-items: flex-start; gap: 8px; padding: 5px 4px; border-radius: 4px; cursor: pointer; transition: background 0.1s; }
+  .risk-row:hover, .risk-row.active { background: rgba(46,123,168,0.06); }
+  .risk-num-sm { width: 20px; height: 20px; min-width: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 600; margin-top: 1px; font-family: 'Helvetica Neue', Arial, sans-serif; }
+  .rn-critical { background: rgba(201,150,58,0.15); border: 1.5px solid #C9963A; color: #C9963A; }
+  .rn-elevated { background: rgba(46,123,168,0.12); border: 1.5px solid #2E7BA8; color: #2E7BA8; }
+  .rn-latent { background: transparent; border: 1.5px dashed #5F5E5A; color: #5F5E5A; }
+  .rn-label { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; color: #1a1a1a; line-height: 1.4; }
+  .rn-sub { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 10px; color: #888780; margin-top: 1px; }
+  .cat-hdr-sm { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 9px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; padding: 7px 0 2px; border-bottom: 0.5px solid rgba(136,135,128,0.2); margin-bottom: 2px; color: #888780; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="report-header">
+    <div class="brand-line">
+      <div class="brand">AUREUS MACRO</div>
+      <div class="date-line">April 2026 | Issue 1</div>
+    </div>
+    <h1>Nine Layers of Risk Behind Q1 2026 Bank Earnings</h1>
+    <div class="subtitle">JPMorgan Chase · Citigroup · Wells Fargo · Goldman Sachs</div>
+  </div>
+
+  <!-- PREFACE -->
+  <div class="section">
+    <h2>Preface: The Ash Beneath the Surface</h2>
+    <p>Q1 2026 delivered what appeared to be a resurgent earnings season for U.S. financials. JPMorgan reported net income of $16.5B. Citigroup posted $5.8B, up 134% sequentially. Goldman Sachs delivered $5.6B. FactSet placed Q1 Financials sector earnings growth at 15.1%, on track for the sixth consecutive quarter of double-digit expansion.</p>
+    <p>The structure underneath does not support the headline.</p>
+    <p>This report applies the Funding Stress Regime framework to the Q1 2026 earnings cycle across JPMorgan Chase, Citigroup, Wells Fargo, and Goldman Sachs. The framework tracks the collision of four forces: fiscal expansion sustaining demand while crowding private credit, energy and infrastructure constraints absorbing capital before generating productivity, liquidity recycling breaking down as funds concentrate at the top of the system, and yield levels driving asset pricing rather than fundamental value creation.</p>
+    <p>What the bank earnings reveal is not resilience. It is a system managing its own contradictions through accounting, and managing them well enough that the contradictions remain invisible at the headline level.</p>
+    <div class="pull-quote">This report does not add new data. It changes how the existing data is read.</div>
+  </div>
+
+  <!-- NINE LAYERS INDEX -->
+  <div class="section">
+    <div class="layers-index">
+      <div class="layers-intro">This quarter is not best understood by bank. It is best understood by layer.</div>
+      <div class="layer-index-row">
+        <div class="layer-num num-critical">1</div>
+        <div><div class="layer-index-name">Credit quality deterioration</div><div class="layer-index-anchor">JPM 3.47% / Citi PLCC 5.05% / WFC 4.21% — already in progress</div></div>
+      </div>
+      <div class="layer-index-row">
+        <div class="layer-num num-critical">2</div>
+        <div><div class="layer-index-name">Accounting defense failure</div><div class="layer-index-anchor">WFC $1.8B coverage gap — home price assumption is load-bearing</div></div>
+      </div>
+      <div class="layer-index-row">
+        <div class="layer-num num-elevated">3</div>
+        <div><div class="layer-index-name">CRE structural wound</div><div class="layer-index-anchor">Office non-accrual 11.54% masked by 2.86% blended average</div></div>
+      </div>
+      <div class="layer-index-row">
+        <div class="layer-num num-elevated">4</div>
+        <div><div class="layer-index-name">Liquidity fracture</div><div class="layer-index-anchor">JPM small business credit 0.935% of total — capital recycling at the top</div></div>
+      </div>
+      <div class="layer-index-row">
+        <div class="layer-num num-elevated">5</div>
+        <div><div class="layer-index-name">Rate paradox</div><div class="layer-index-anchor">AI infra floors long-end rates — market pricing 2-3 cuts, structure pricing fewer</div></div>
+      </div>
+      <div class="layer-index-row">
+        <div class="layer-num num-elevated">6</div>
+        <div><div class="layer-index-name">Forward PE ceiling</div><div class="layer-index-anchor">20.4x vs 10-yr avg 18.9x — EPS and discount rate both under pressure</div></div>
+      </div>
+      <div class="layer-index-row">
+        <div class="layer-num num-latent">7</div>
+        <div><div class="layer-index-name">AI capital cycle mismatch</div><div class="layer-index-anchor">18-36 month productivity lag — interest expense accumulates now</div></div>
+      </div>
+      <div class="layer-index-row">
+        <div class="layer-num num-latent">8</div>
+        <div><div class="layer-index-name">Regional bank opacity</div><div class="layer-index-anchor">Deposit migration source unknown — complete data gap</div></div>
+      </div>
+      <div class="layer-index-row">
+        <div class="layer-num num-latent">9</div>
+        <div><div class="layer-index-name">AI employment displacement</div><div class="layer-index-anchor">Citi $250K avg severance — income base suppressed without broad hiring</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- INTERACTIVE RISK MATRIX -->
+  <div class="matrix-container">
+    <div class="matrix-title">Interactive Chart — Funding Stress Regime: Nine-Layer Risk Matrix</div>
+    <div style="display:flex;gap:16px;margin-bottom:14px;flex-wrap:wrap;">
+      <div style="display:flex;align-items:center;gap:5px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:11px;color:#888780;"><span style="width:9px;height:9px;border-radius:50%;background:#C9963A;display:inline-block;"></span>Critical — active now</div>
+      <div style="display:flex;align-items:center;gap:5px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:11px;color:#888780;"><span style="width:9px;height:9px;border-radius:50%;background:#2E7BA8;display:inline-block;"></span>Elevated — in motion</div>
+      <div style="display:flex;align-items:center;gap:5px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:11px;color:#888780;"><span style="width:9px;height:9px;border-radius:50%;border:1.5px dashed #5F5E5A;display:inline-block;"></span>Latent — data gap</div>
+      <div style="margin-left:auto;font-family:'Helvetica Neue',Arial,sans-serif;font-size:10px;color:#888780;">Click any node or row for detail</div>
+    </div>
+    <div style="display:grid;grid-template-columns:190px 1fr;gap:16px;align-items:start;">
+      <div>
+        <div class="cat-hdr-sm" style="color:#C9963A;">Credit Risk</div>
+        <div class="risk-row" id="row-1" onclick="highlightRisk(1)"><div class="risk-num-sm rn-critical">1</div><div><div class="rn-label">Credit quality</div><div class="rn-sub">JPM 3.47% / Citi 5.05% / WFC 4.21%</div></div></div>
+        <div class="risk-row" id="row-2" onclick="highlightRisk(2)"><div class="risk-num-sm rn-critical">2</div><div><div class="rn-label">Accounting defense</div><div class="rn-sub">WFC $1.8B coverage gap</div></div></div>
+        <div class="cat-hdr-sm" style="color:#2E7BA8;">Structural Risk</div>
+        <div class="risk-row" id="row-3" onclick="highlightRisk(3)"><div class="risk-num-sm rn-elevated">3</div><div><div class="rn-label">CRE wound</div><div class="rn-sub">Office 11.54% vs 2.86% blended</div></div></div>
+        <div class="risk-row" id="row-6" onclick="highlightRisk(6)"><div class="risk-num-sm rn-elevated">6</div><div><div class="rn-label">Forward PE ceiling</div><div class="rn-sub">20.4x vs 10-yr avg 18.9x</div></div></div>
+        <div class="cat-hdr-sm" style="color:#2E7BA8;">Liquidity Risk</div>
+        <div class="risk-row" id="row-4" onclick="highlightRisk(4)"><div class="risk-num-sm rn-elevated">4</div><div><div class="rn-label">Liquidity fracture</div><div class="rn-sub">JPM small biz 0.935% of total</div></div></div>
+        <div class="cat-hdr-sm" style="color:#2E7BA8;">Rate Risk</div>
+        <div class="risk-row" id="row-5" onclick="highlightRisk(5)"><div class="risk-num-sm rn-elevated">5</div><div><div class="rn-label">Rate paradox</div><div class="rn-sub">AI infra floors long-end rates</div></div></div>
+        <div class="cat-hdr-sm" style="color:#5F5E5A;">Systemic / Latent</div>
+        <div class="risk-row" id="row-7" onclick="highlightRisk(7)"><div class="risk-num-sm rn-latent">7</div><div><div class="rn-label">AI cycle mismatch</div><div class="rn-sub">18-36 month lag</div></div></div>
+        <div class="risk-row" id="row-8" onclick="highlightRisk(8)"><div class="risk-num-sm rn-latent">8</div><div><div class="rn-label">Regional bank opacity</div><div class="rn-sub">Complete data gap</div></div></div>
+        <div class="risk-row" id="row-9" onclick="highlightRisk(9)"><div class="risk-num-sm rn-latent">9</div><div><div class="rn-label">AI employment shift</div><div class="rn-sub">Citi $250K avg severance</div></div></div>
+        <div style="margin-top:10px;padding-top:8px;border-top:0.5px solid rgba(136,135,128,0.2);font-family:'Helvetica Neue',Arial,sans-serif;font-size:9px;color:#888780;line-height:1.5;">Source: JPM, Citi, WFC, GS Q1 2026 earnings supplements. Aureus Macro analysis.</div>
+      </div>
+      <div style="position:relative;">
+        <div id="am-tt" class="am-tt"></div>
+        <canvas id="amMatrix" style="width:100%;display:block;cursor:crosshair;border-radius:4px;"></canvas>
+        <div id="am-detail" style="margin-top:10px;background:#f0f4f8;border-left:3px solid #2E7BA8;border-radius:0 4px 4px 0;padding:10px 12px;min-height:48px;font-family:'Helvetica Neue',Arial,sans-serif;">
+          <span style="font-size:11px;color:#888780;">Click or hover any node to see data anchor and trigger.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- LAYER 1 & 2 -->
+  <div class="section">
+    <div class="layer-tag tag-critical">Critical — Layer 1 & 2</div>
+    <div class="layer-heading">The Accounting Defense and the Home Price Bet</div>
+
+    <div class="chart-placeholder">
+      <div class="chart-placeholder-label">Insert Chart 4 here</div>
+      <div class="chart-placeholder-title">Quality of Earnings — The Accounting Buffer</div>
+      <div class="chart-placeholder-note">GS reported $5.63B vs core $4.73B / WFC reported $5.25B vs core $5.12B</div>
+    </div>
+
+    <p>The single most important structural fact in Q1 2026 bank earnings is not a number that appears on the front page of any earnings release. It is the logic connecting two numbers that appear on different pages.</p>
+    <p>JPMorgan's net charge-off rate on card services rose to 3.47% in Q1, up 33 basis points sequentially. In the same quarter, JPMorgan released $145M in consumer-side loan loss reserves. The release was driven by, in management's own language, "improvements in home prices."</p>
+    <p>Wells Fargo's card charge-off rate held at 4.21%. Wells Fargo's allowance coverage ratio fell from 1.59% to 1.41% of total loans. Wells Fargo recorded $14M in net recoveries on residential mortgage, a figure that reflects the same assumption: that home price appreciation is sufficient collateral against deteriorating consumer credit quality.</p>
+    <p>These two movements, rising charge-offs and falling reserves, are not contradictory under CECL accounting if the macroeconomic scenario embedded in the model is sufficiently optimistic about asset values. Both JPMorgan and Wells Fargo are running models that assume home prices continue to improve through 2026. Those models are producing reserve releases that are directly offsetting charge-off pressure, creating the appearance of stable provision expense.</p>
+    <p>Jamie Dimon, in the same earnings release, listed "elevated asset prices" as one of the underappreciated risks in the current environment.</p>
+    <p>The CEO's public risk assessment and the firm's internal CECL model are running contradictory assumptions. One of them will be resolved by the data.</p>
+    <p>The quantification matters. Wells Fargo's allowance coverage compression from 1.59% to 1.41% represents approximately $1.8B in reserve depletion against its loan book. Restoring coverage to last year's level would consume more than 35% of a single quarter's net income. That is not a tail risk. That is a balance sheet that has been optimized against a specific macro scenario, and that scenario is home prices do not fall.</p>
+    <p>For JPMorgan, the residential mortgage allowance was compressed from $647M to $507M over the quarter, a $140M reduction taken against a backdrop of rising card charge-offs. The offset logic is explicit. The fragility is structural.</p>
+    <p>The trigger is specific and observable. A negative Case-Shiller print reverses the accounting direction. The reserve release becomes a reserve build. The EPS trajectory inverts. The market has not priced this contingency because the contingency does not appear in the reported numbers.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- LAYER 3 -->
+  <div class="section">
+    <div class="layer-tag tag-elevated">Elevated — Layer 3</div>
+    <div class="layer-heading">The CRE Structural Wound</div>
+
+    <div class="chart-placeholder">
+      <div class="chart-placeholder-label">Insert Chart 3 here</div>
+      <div class="chart-placeholder-title">Reported Credit Quality Is a Statistical Illusion</div>
+      <div class="chart-placeholder-note">WFC CRE 2.86% reported vs 11.54% true office non-accrual rate</div>
+    </div>
+
+    <p>Wells Fargo's Q1 2026 supplement reports a commercial real estate non-accrual rate of 2.86%. That number is accurate and misleading simultaneously.</p>
+    <p>The 2.86% is a weighted average across the entire CRE portfolio, which includes industrial properties running a non-accrual rate of 0.14% and multifamily properties performing near par. The office segment, which carries $20.7B in outstanding loans, has a non-accrual rate of 11.54%.</p>
+    <p>The 2.86% figure that appears in summary tables is a statistical artifact of portfolio composition. The number that describes the actual credit condition of office lending is 11.54%.</p>
+    <p>Net charge-offs in Q1 on the CRE portfolio were $19M, down from $158M in Q4. This deceleration is not a sign of stabilization. It reflects the operational reality that banks manage distressed commercial real estate through extensions, modifications, and covenant waivers rather than through formal loss recognition. The loss is deferred, not resolved.</p>
+    <p>Office vacancy rates in major U.S. metros exceed 30% in several markets. The collateral supporting Wells Fargo's office loan book is marked at values that predate the full repricing of commercial real estate in a sustained high-rate environment. When loan-to-value ratios are recalculated against current market clearing prices, a portion of the loans currently classified as performing will not remain performing.</p>
+    <p>The average commercial real estate loan rate in the current portfolio sits at approximately 5.62%. That rate level, sustained against assets generating declining cash flows as vacancy rises, is the arithmetic of eventual default. The timeline is determined by how long modifications and extensions can defer the formal recognition.</p>
+    <p>What the 2.86% headline obscures is that nearly two-thirds of Wells Fargo's CRE non-accrual balance is concentrated in a single property type facing a structural demand shift that is not cyclical. Office demand is not recovering when rates fall. It is recovering when occupancy patterns change, and occupancy patterns have not changed.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- LAYER 4 & 5 -->
+  <div class="section">
+    <div class="layer-tag tag-elevated">Elevated — Layer 4 & 5</div>
+    <div class="layer-heading">The Bottleneck Rotation</div>
+
+    <div class="chart-placeholder">
+      <div class="chart-placeholder-label">Insert Chart 1 here</div>
+      <div class="chart-placeholder-title">Infrastructure Is Funded. The Consumer Pays.</div>
+      <div class="chart-placeholder-note">WFC Utilities +27.3% / WFC Oil & Gas +20.8% / Citi Corp Loans +14% vs consumer NCO rates</div>
+    </div>
+
+    <div class="chart-placeholder">
+      <div class="chart-placeholder-label">Insert Chart 2 here</div>
+      <div class="chart-placeholder-title">The System Funds Scale. It Starves Small Business.</div>
+      <div class="chart-placeholder-note">JPM credit distribution: Corporate 88% ($750B) vs Small Business 0.93% ($8B)</div>
+    </div>
+
+    <p>The most significant structural development in Q1 2026 lending data is not visible in consumer credit statistics. It is visible in the composition of commercial loan growth.</p>
+    <p>Wells Fargo's technology, telecom, and media segment grew 29.2% year-over-year in Q1. Its utilities segment grew 27.3%. Oil, gas, and pipeline lending grew 20.8% sequentially.</p>
+    <p>These three categories are not growing because the economy is broadly healthy. They are growing because a specific capital cycle, AI infrastructure and the power grid required to support it, is absorbing credit capacity at a rate that compresses availability for other borrowers.</p>
+    <p>JPMorgan's Commercial and Specialized Industries segment posted revenue growth of 17% year-over-year. Jamie Dimon explicitly named "AI-driven capital investment" as one of the core tailwinds supporting current economic resilience. The tailwind framing is accurate. What the framing omits is that a tailwind for infrastructure capital formation is simultaneously a headwind for the cost of capital across the rest of the economy.</p>
+    <p>Heavy infrastructure investment is long-duration, rate-insensitive on the demand side, and highly capital-consumptive. When bank balance sheets allocate disproportionately toward 30-year data center and grid upgrade financing, the marginal cost of credit for shorter-duration, rate-sensitive borrowers rises. That is the mechanism through which AI infrastructure spending sustains long-end rate pressure even as the Federal Reserve maintains a nominal easing bias.</p>
+    <p>The consumer credit data makes the compression visible from the other side. Citigroup's private label credit card charge-off rate reached 5.05% in Q1. JPMorgan's card charge-off rate rose 33 basis points sequentially. Wells Fargo's card rate held at 4.21%. These are not independent data points. They are the downstream expression of a capital allocation structure that is prioritizing infrastructure over consumption, with the cost falling on consumers through sustained rate levels.</p>
+    <p>The rotation is real. The productivity it will eventually generate is also real. The issue for current asset pricing is that the productivity is 18 to 36 months away, and the credit cost is being paid now.</p>
+    <p>JPMorgan provided $855B in credit and capital to clients in Q1 2026. Of that total, $80B went to U.S. small businesses. The ratio is 0.935%. The remaining 88% was deployed to large corporations and non-U.S. government entities. JPMorgan's Business Banking segment originated $733M in Q1 against $815M in Q1 2025, a 10% year-over-year decline in new small business credit.</p>
+    <p>All four major banks reported sequential deposit growth in Q1. These deposits did not originate in the large bank system. They migrated to it. Regional banks are the primary credit providers to small businesses and small commercial real estate borrowers. As their deposit base contracts, their credit creation capacity contracts with it.</p>
+    <p>Goldman Sachs reported equity financing revenue of $2.61B in Q1, up 59% year-over-year, driven by prime financing activity. JPMorgan's equity markets revenue rose 57% sequentially. Institutional investors are borrowing against equity positions to increase market exposure. The leverage is real. The underlying economic activity that would justify the asset prices being leveraged against is concentrated in a narrow set of AI and infrastructure names whose earnings are 18 to 36 months from reflecting the capital being deployed into them.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- LAYER 6 -->
+  <div class="section">
+    <div class="layer-tag tag-elevated">Elevated — Layer 6</div>
+    <div class="layer-heading">The Distortion in Capital Markets Pricing</div>
+    <p>Goldman Sachs reported advisory revenue of $1.49B in Q1, up 89% year-over-year. JPMorgan reported advisory revenue of $1.27B, up 82%. Goldman's investment banking backlog decreased slightly from year-end 2025 levels. The advisory revenue surge is a drawdown of existing pipeline, not the accumulation of new activity.</p>
+    <p>Debt underwriting tells the other side. Goldman's debt underwriting revenue grew 8% year-over-year. JPMorgan's declined 7%. The combination is the signature of a market in consolidation rather than expansion. Large companies are acquiring rather than building. Capital is concentrating rather than distributing.</p>
+    <p>FactSet's sector-level forward estimates encode this dynamic. Financials sector earnings growth for Q2 is projected at 5.6%. Q3 is projected at 2.6%. The analysts who produced the 15.1% Q1 headline are simultaneously forecasting near-stagnation two quarters forward. The Q1 number was a convergence of tax calendar, base period distortion, and one-time items. The forward estimates reflect what the underlying business trajectory actually looks like.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- LAYER 7 -->
+  <div class="section">
+    <div class="layer-tag tag-latent">Latent — Layer 7</div>
+    <div class="layer-heading">Earnings Quality and the AI Productivity Gap</div>
+    <p>Goldman Sachs reported an effective tax rate of 13.2% in Q1, against a normalized rate of approximately 21%. The difference reflects $895M in tax benefits from employee equity award settlements. Strip the tax item and Goldman's sequential earnings growth was approximately 2.5%.</p>
+    <p>Wells Fargo's Q1 earnings included $135M in discrete tax benefits from prior-year tax resolutions. Adjusted, core earnings declined approximately 4.5% sequentially, consistent with 13 basis points of net interest margin compression flowing through without offset.</p>
+    <p>JPMorgan's 27% sequential growth is measured against a Q4 2025 base that absorbed a $2.2B Apple Card provision charge. Restating the base produces normalized sequential growth of approximately 12%. Citigroup's 134% sequential increase reflects the mirror of Q4's $1.1B Russia-related loss. Normalized, the sequential growth was approximately 61%.</p>
+    <p>Citigroup disclosed that AI tools now cover more than 80% of its workforce, with engineers using advanced AI to remap 30 years of legacy code in two days, and market operations generating more than 1,700 hours of additional monthly capacity through document processing automation. These are genuine productivity gains captured without meaningful headcount reduction. Citigroup's net employee reduction in Q1 was approximately 2,000 people against $500M in severance expense, implying average separation costs of $250,000 per departing employee.</p>
+    <p>AI is raising the productivity ceiling for existing employees while eliminating specific high-cost roles. The net employment effect is muted. AI productivity gains are not translating into the broad labor market improvements that would sustain consumer credit quality. This connects directly back to Layer 1.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- LAYER 8 -->
+  <div class="section">
+    <div class="layer-tag tag-latent">Latent — Layer 8</div>
+    <div class="layer-heading">The Data We Do Not Have</div>
+    <p>This layer is different from the others. It is not a risk that has been confirmed by the data. It is a risk that exists precisely because the data is absent.</p>
+    <p>All four major banks reported deposit growth in Q1. These deposits came from somewhere. The most probable source is the regional and community bank system, which serves the small business and community commercial real estate borrowers that the major banks are not prioritizing.</p>
+    <p>Regional bank Q1 earnings have not yet been reported at the time of this publication. The following questions are unanswered. What is the current deposit outflow rate at regional banks, and is it accelerating? What is the allowance coverage ratio for commercial real estate at institutions without JPMorgan's modeling sophistication? How many regional banks have begun contracting small business credit lines in response to funding pressure?</p>
+    <p>The absence of this data is not a neutral condition. It is a known unknown that sits directly beneath the narrative of system-wide stability. The strength at the top and the stress at the bottom are not independent phenomena. They are the same phenomenon observed from different vantage points.</p>
+    <p>This layer will be partially resolved when regional bank earnings are published. The Aureus Macro series will update the framework at that point.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- CONCLUSION -->
+  <div class="section">
+    <h2>Conclusion: Capital Preservation in a Regime of Managed Contradictions</h2>
+
+    <div class="pull-quote">The numbers did not lie. They just didn't show you where the losses are buried.</div>
+
+    <p>Layers 1 and 2 show that consumer charge-offs are rising across all credit tiers while reserve coverage is being reduced against an assumption of continued home price appreciation. The assumption is load-bearing. Its failure is nonlinear.</p>
+    <p>Layer 3 shows that the headline CRE non-accrual rate of 2.86% is a portfolio average that obscures an office sector non-accrual rate of 11.54%, with loss recognition deferred through modification rather than resolved through disposition.</p>
+    <p>Layers 4 and 5 show that liquidity is concentrating at the top of the financial system and recycling through institutional leverage and infrastructure lending, with 0.935% of JPMorgan's total credit deployment reaching small businesses, while AI and power grid capital formation absorbs credit capacity and sustains long-end rate pressure.</p>
+    <p>Layer 6 shows that reported earnings growth significantly overstates underlying business momentum when tax items, base period distortions, and one-time charges are removed. FactSet's own forward estimates confirm the trajectory: Q2 at 5.6%, Q3 at 2.6%.</p>
+    <p>Layer 7 shows that AI productivity gains are real but captured without broad employment expansion, suppressing the consumer income base that ultimately determines whether the home price assumption in Layers 1 and 2 holds.</p>
+    <p>Layer 8 remains open. Regional bank data will either confirm or challenge the system stability narrative. Until it arrives, the picture is incomplete.</p>
+    <p>Layer 9 connects them all. AI employment displacement, AI capital cycle mismatch, and consumer credit deterioration are not three separate risks. They are three expressions of the same structural transition: capital moving toward long-duration infrastructure, productivity gains captured without income distribution, and the consumer balance sheet absorbing the cost of a transition whose benefits are 18 to 36 months away.</p>
+    <p>For asset allocators, the framework produces three observations. The beta return available from broad U.S. equity exposure is constrained by the ceiling on forward P/E expansion. Long-end rates will remain supported by infrastructure capital demand regardless of Federal Reserve policy direction. Forward earnings estimates are built on AI productivity assumptions that are 18 to 36 months from verification. The current Forward P/E of 20.4x against a 10-year average of 18.9x prices in a scenario that bank balance sheet data does not yet confirm.</p>
+    <p>The risk parameters are observable and specific. A negative Case-Shiller print triggers nonlinear reserve builds at JPMorgan and Wells Fargo. Regional bank earnings will determine whether deposit migration has created systemic credit supply constraints in the small business segment.</p>
+    <p>The regime is not a crisis. It is a system of managed contradictions, where accounting flexibility, tax calendar timing, and asset price assumptions are doing the work that operating performance is not. Managed contradictions resolve. The question for capital allocation is not whether they resolve but in what sequence and at what speed.</p>
+    <p>The next edition of this report will incorporate Regional Bank Q1 earnings, insurance sector results, and updated Case-Shiller data. Each new data point will be applied to the nine-layer framework.</p>
+
+    <div class="pull-quote" style="border-color: var(--navy);">The layers do not change. The data will.</div>
+  </div>
+
+  <div class="report-footer">
+    <div class="footer-brand">AUREUS MACRO</div>
+    <div class="footer-text">Institutional-grade macroeconomic analysis focused on funding conditions, credit cycles, and asset allocation implications. Subscribe for the complete research series.</div>
+  </div>
+
+</div>
+
+<script>
+const riskData = [
+  {id:1,prob:85,impact:72,tier:'Critical',color:'#C9963A',label:'Credit quality deterioration',category:'Credit',anchor:'JPM card NCO 3.47% (+33 bps QoQ). Citi PLCC 5.05%. WFC 4.21%. Cross-tier synchronization confirms systemic penetration.',trigger:'Already in progress across all credit tiers'},
+  {id:2,prob:62,impact:90,tier:'Critical',color:'#C9963A',label:'Accounting defense failure',category:'Credit',anchor:'WFC allowance coverage 1.59% to 1.41% — $1.8B gap. JPM housing allowance cut $140M against rising card NCOs. Home price appreciation as load-bearing CECL assumption.',trigger:'Case-Shiller negative monthly print'},
+  {id:3,prob:70,impact:65,tier:'Elevated',color:'#2E7BA8',label:'CRE structural wound',category:'Structural',anchor:'WFC office non-accrual 11.54% masked by 2.86% blended average. Q1 NCOs $19M vs $158M prior quarter — deferral through modification, not resolution.',trigger:'LTV breach on loan modification expiry'},
+  {id:4,prob:68,impact:62,tier:'Elevated',color:'#2E7BA8',label:'Liquidity fracture',category:'Liquidity',anchor:'JPM small business credit 0.935% of total. Originations -10% YoY. GS prime brokerage +59%, JPM equities +57% — liquidity recycling at the top.',trigger:'Regional bank deposit acceleration'},
+  {id:5,prob:72,impact:56,tier:'Elevated',color:'#2E7BA8',label:'Rate paradox',category:'Rate',anchor:'WFC utilities/power credit +27.3% YoY. AI infra demand floors long-end rates regardless of Fed direction. Market pricing 2-3 cuts; structure pricing 1 or fewer.',trigger:'Inflation re-acceleration above 3%'},
+  {id:6,prob:65,impact:60,tier:'Elevated',color:'#2E7BA8',label:'Forward PE ceiling',category:'Structural',anchor:'Forward PE 20.4x vs 10-yr avg 18.9x. FactSet Financials sector: Q2 5.6%, Q3 2.6%. EPS numerator and discount rate both under simultaneous pressure.',trigger:'EPS miss combined with rate hold'},
+  {id:7,prob:45,impact:82,tier:'Latent',color:'#5F5E5A',label:'AI capital cycle mismatch',category:'Systemic',anchor:'18-36 month lag between capital deployment and productivity. WFC data center/power credit +29% YoY — revenue not yet on borrowers\' income statements.',trigger:'AI productivity miss at 18-month mark'},
+  {id:8,prob:55,impact:78,tier:'Latent',color:'#5F5E5A',label:'Regional bank opacity',category:'Systemic',anchor:'Four major banks all report deposit growth. Source is regional bank outflows. CRE exposure, allowance coverage, small business credit at regional level — complete data gap.',trigger:'Regional bank Q1 earnings season'},
+  {id:9,prob:50,impact:52,tier:'Latent',color:'#5F5E5A',label:'AI employment displacement',category:'Systemic',anchor:'Citi $500M severance, 2,000 net reduction — $250K avg. AI raises productivity ceiling without broad hiring. Consumer income growth suppressed.',trigger:'Non-farm payrolls sustained softening'}
+];
+
+const mc = document.getElementById('amMatrix');
+const mDetail = document.getElementById('am-detail');
+const mTT = document.getElementById('am-tt');
+let mActive = null;
+const mPad = {left:44,right:14,top:14,bottom:38};
+
+function mSetup(){
+  const dpr=window.devicePixelRatio||1;
+  const W=mc.parentElement.clientWidth;
+  const H=Math.round(W*0.75);
+  mc.width=W*dpr; mc.height=H*dpr;
+  mc.style.width=W+'px'; mc.style.height=H+'px';
+  const ctx=mc.getContext('2d'); ctx.scale(dpr,dpr);
+  return {ctx,W,H};
+}
+let mS=mSetup();
+
+function mX(p){return mPad.left+(p/100)*(mS.W-mPad.left-mPad.right);}
+function mY(p){return mPad.top+(mS.H-mPad.top-mPad.bottom)-(p/100)*(mS.H-mPad.top-mPad.bottom);}
+
+function mDraw(hl){
+  const{ctx,W,H}=mS;
+  ctx.clearRect(0,0,W,H);
+  const pW=W-mPad.left-mPad.right,pH=H-mPad.top-mPad.bottom;
+  [[0,50,50,100,0.03],[50,50,100,100,0.09],[0,0,50,50,0.01],[50,0,100,50,0.04]].forEach(([x1,y1,x2,y2,a])=>{
+    ctx.fillStyle=`rgba(201,150,58,${a})`;
+    ctx.fillRect(mX(x1),mY(y2),mX(x2)-mX(x1),mY(y1)-mY(y2));
+  });
+  ctx.strokeStyle='rgba(136,135,128,0.1)';ctx.lineWidth=0.5;
+  [0,25,50,75,100].forEach(v=>{
+    ctx.beginPath();ctx.moveTo(mX(v),mPad.top);ctx.lineTo(mX(v),mPad.top+pH);ctx.stroke();
+    ctx.beginPath();ctx.moveTo(mPad.left,mY(v));ctx.lineTo(mPad.left+pW,mY(v));ctx.stroke();
+  });
+  ctx.strokeStyle='rgba(46,123,168,0.25)';ctx.lineWidth=0.8;ctx.setLineDash([4,4]);
+  ctx.beginPath();ctx.moveTo(mX(50),mPad.top);ctx.lineTo(mX(50),mPad.top+pH);ctx.stroke();
+  ctx.beginPath();ctx.moveTo(mPad.left,mY(50));ctx.lineTo(mPad.left+pW,mY(50));ctx.stroke();
+  ctx.setLineDash([]);
+  ctx.strokeStyle='rgba(46,123,168,0.3)';ctx.lineWidth=0.8;
+  ctx.strokeRect(mPad.left,mPad.top,pW,pH);
+  ctx.fillStyle='#888780';ctx.font='9px sans-serif';
+  ctx.textAlign='center';ctx.textBaseline='top';
+  [['Low',17],['Med',50],['High',83]].forEach(([t,v])=>ctx.fillText(t,mX(v),mPad.top+pH+5));
+  ctx.textAlign='right';ctx.textBaseline='middle';
+  [['Low',17],['Med',50],['High',83]].forEach(([t,v])=>ctx.fillText(t,mPad.left-4,mY(v)));
+  ctx.fillStyle='#5F5E5A';ctx.font='9px sans-serif';
+  ctx.textAlign='center';ctx.textBaseline='top';
+  ctx.fillText('Probability of trigger →',mPad.left+pW/2,H-12);
+  ctx.save();ctx.translate(10,mPad.top+pH/2);ctx.rotate(-Math.PI/2);
+  ctx.textBaseline='middle';ctx.fillText('↑ Impact magnitude',0,0);ctx.restore();
+  riskData.forEach(r=>{
+    const x=mX(r.prob),y=mY(r.impact),isHl=hl===r.id,rad=isHl?19:15;
+    if(isHl){ctx.beginPath();ctx.arc(x,y,rad+6,0,Math.PI*2);ctx.fillStyle=r.tier==='Critical'?'rgba(201,150,58,0.1)':r.tier==='Elevated'?'rgba(46,123,168,0.08)':'rgba(95,94,90,0.05)';ctx.fill();}
+    ctx.beginPath();ctx.arc(x,y,rad,0,Math.PI*2);
+    ctx.fillStyle=r.tier==='Critical'?'rgba(201,150,58,0.16)':r.tier==='Elevated'?'rgba(46,123,168,0.12)':'rgba(95,94,90,0.05)';
+    ctx.fill();ctx.strokeStyle=r.color;ctx.lineWidth=isHl?2.5:1.5;
+    if(r.tier==='Latent')ctx.setLineDash([3,3]);
+    ctx.stroke();ctx.setLineDash([]);
+    ctx.fillStyle=r.tier==='Latent'?'#888780':r.color;
+    ctx.font=(isHl?'600 11px':'600 10px')+' sans-serif';
+    ctx.textAlign='center';ctx.textBaseline='middle';
+    ctx.fillText(r.id,x,y);
+  });
+}
+mDraw(null);
+
+function mShowDetail(r){
+  const tc=r.tier==='Critical'?'#C9963A':r.tier==='Elevated'?'#2E7BA8':'#5F5E5A';
+  mDetail.innerHTML='<div style="display:flex;gap:8px;align-items:flex-start;"><span style="background:'+tc+';color:#fff;border-radius:50%;width:20px;height:20px;min-width:20px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:600;font-family:\'Helvetica Neue\',Arial,sans-serif;">'+r.id+'</span><div><div style="font-size:11px;font-weight:600;font-family:\'Helvetica Neue\',Arial,sans-serif;color:#1a1a1a;margin-bottom:2px;">'+r.label+' <span style="font-weight:400;color:'+tc+';">'+r.tier+'</span></div><div style="font-size:11px;font-family:\'Helvetica Neue\',Arial,sans-serif;color:#444441;line-height:1.5;margin-bottom:3px;">'+r.anchor+'</div><div style="font-size:10px;font-family:\'Helvetica Neue\',Arial,sans-serif;color:#2E7BA8;">Trigger: '+r.trigger+'</div></div></div>';
+  document.querySelectorAll('.risk-row').forEach(el=>el.classList.remove('active'));
+  const row=document.getElementById('row-'+r.id);
+  if(row)row.classList.add('active');
+}
+
+function highlightRisk(id){
+  mActive=id;mDraw(id);
+  const r=riskData.find(x=>x.id===id);
+  if(r)mShowDetail(r);
+}
+window.highlightRisk=highlightRisk;
+
+mc.addEventListener('mousemove',function(e){
+  const rect=mc.getBoundingClientRect();
+  const mx=e.clientX-rect.left,my=e.clientY-rect.top;
+  let found=null;
+  riskData.forEach(r=>{const dx=mx-mX(r.prob),dy=my-mY(r.impact);if(Math.sqrt(dx*dx+dy*dy)<19)found=r;});
+  if(found){
+    mTT.style.opacity='1';
+    mTT.innerHTML='<span style="color:#C9963A;font-size:10px;font-weight:600;font-family:\'Helvetica Neue\',Arial,sans-serif;">'+found.tier.toUpperCase()+' — '+found.category+'</span><br><span style="color:#fff;font-size:11px;">'+found.label+'</span>';
+    let tx=mx+16,ty=my-8;
+    if(tx+250>mS.W)tx=mx-256;
+    if(ty<0)ty=4;
+    mTT.style.left=tx+'px';mTT.style.top=ty+'px';
+    mDraw(found.id);mShowDetail(found);
+  } else {
+    mTT.style.opacity='0';
+    if(!mActive){mDraw(null);document.querySelectorAll('.risk-row').forEach(el=>el.classList.remove('active'));}
+  }
+});
+
+mc.addEventListener('click',function(e){
+  const rect=mc.getBoundingClientRect();
+  const mx=e.clientX-rect.left,my=e.clientY-rect.top;
+  let found=null;
+  riskData.forEach(r=>{const dx=mx-mX(r.prob),dy=my-mY(r.impact);if(Math.sqrt(dx*dx+dy*dy)<19)found=r;});
+  if(found){mActive=found.id;mDraw(found.id);mShowDetail(found);}
+  else{mActive=null;mDraw(null);mDetail.innerHTML='<span style="font-size:11px;font-family:\'Helvetica Neue\',Arial,sans-serif;color:#888780;">Click or hover any node to see data anchor and trigger.</span>';document.querySelectorAll('.risk-row').forEach(el=>el.classList.remove('active'));}
+});
+
+mc.addEventListener('mouseleave',function(){mTT.style.opacity='0';mDraw(mActive);});
+window.addEventListener('resize',function(){mS=mSetup();mDraw(mActive);});
+</script>
+</body>
+</html>
